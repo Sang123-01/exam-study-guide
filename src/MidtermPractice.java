@@ -57,8 +57,20 @@ public class MidtermPractice {
      * @return the average of the values or 0 if the array is empty
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
-    public static double findAverage(float[] arr) {
-        return -1.0;
+    public static double findAverage(float[] arr) 
+    {
+        double Total = 0;
+        int count = 0;
+        for(int i = 0; i < arr.length; i++)
+            {
+                Total = Total + arr[i];
+                count++;
+            }
+        if(arr.length == 0)
+            {
+                return 0.0;
+            }    
+        return Total/count;
     }
 
     /**
