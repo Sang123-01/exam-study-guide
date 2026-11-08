@@ -9,8 +9,25 @@ public class MidtermPractice {
      * @return the longest word in the list or an empty String if the list is empty
      * Example: input: ["apple", "banana", "kiwi"] -> output: "banana"
      */
-    public static String findLongestWord(List<String> list) {
-        return "";
+    public static String findLongestWord(List<String> list) 
+    {   
+        int LongestWCount = 0;
+        int LongWCount = 0;
+        String LongWord = "";
+        for(int i = 0; i < list.size(); i++)
+        {
+            for(int word = 0; word < list.get(i).length(); word++)
+                {
+                    LongestWCount++;
+                }
+            if(LongestWCount > LongWCount)
+                {
+                    LongWCount = LongestWCount;
+                    LongWord = list.get(i);
+                }    
+            LongestWCount = 0;    
+        }
+        return LongWord;
     }
 
     /**
