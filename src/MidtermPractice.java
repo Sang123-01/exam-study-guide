@@ -124,7 +124,15 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
-        return false;
+        for(int i = 0; i < list.size(); i++)
+        {
+            String word = list.get(i);
+            if(!word.startsWith("a") && !word.startsWith("A"))
+                {
+                    return false;
+                }
+        }
+        return true;
     }
 
     /**
