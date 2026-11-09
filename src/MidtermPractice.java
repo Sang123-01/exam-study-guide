@@ -162,8 +162,25 @@ public class MidtermPractice {
      * Example output: 60
      * Explanation: 5 * 3 * 4 = 60
      */
-    public static int product(ListNode head) {
-        return 1;
+    public static int product(ListNode head) 
+    {
+        ListNode current = head;
+        if(current == null)
+        {
+            return 1;
+        }
+        int Total = current.data;
+        while (current != null) 
+        {
+            if(current.next != null)
+            {
+             int data = current.next.data;
+             Total = Total * data;
+            }
+            current = current.next;
+        }
+
+        return Total;
     }
 
     /**
